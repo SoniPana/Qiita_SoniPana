@@ -1,6 +1,6 @@
 <!--
-title:   【GAS】GASからGitHub Actionsを実行してみる
-tags:    GAS,備忘録,GitHubActions
+title:   【GAS】リンクを踏んだらGitHub Actionsを実行するようにしてみる
+tags:    GAS,GitHubActions,備忘録
 id:      3d87fc94fd3c4d6e71ee
 private: true
 -->
