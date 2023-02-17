@@ -2,7 +2,7 @@ name: Qiita Sync Check
 
 on:
   schedule:
-    - cron: "29 17 * * *"
+    - cron: "53 22 * * *"
   workflow_run:
     workflows: ["Qiita Sync"]
     types:
@@ -28,5 +28,5 @@ jobs:
           qiita_sync check . > ./qiita_sync_output.txt
           cat ./qiita_sync_output.txt
           [ ! -s "qiita_sync_output.txt" ] || exit 1
-        env: 
+        env:
           QIITA_ACCESS_TOKEN: ${{ secrets.QIITA_ACCESS_TOKEN }}
