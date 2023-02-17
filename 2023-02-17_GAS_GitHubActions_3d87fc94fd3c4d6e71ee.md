@@ -4,7 +4,6 @@ tags:    GAS,備忘録,GitHubActions
 id:      3d87fc94fd3c4d6e71ee
 private: true
 -->
-
 # はじめに
 
 GitHub Actionsを利用する機会が多かったのですが、外部から実行する方法が分からず困っていました。
@@ -30,23 +29,23 @@ https://qiita.com/P-man_Brown/items/833c5ee114920db079a2
 
 こんな感じでチェックを付ければOKです。
 
-![GitHub Personal Access Tokenのチェック](./image/GHA-GAS/github-personal.png)
+![GitHub Personal Access Tokenのチェック](image/GHA-GAS/github-personal.png)
 
 
 # 2.GAS
 ## 2-1.GASの作成
 GoogleドライブからGoogle App Scriptを開いてください。
-![GASを開く](./image/GHA-GAS/open-gas.png)
+![GASを開く](image/GHA-GAS/open-gas.png)
 ## 2-2.環境変数の設定
 スクリプトにトークンをそのまま貼り付けるとセキュリティ的に非常にマズイので、トークンを環境変数として設定します。
 
 
 プロジェクトの設定→スクリプトプロパティ→スクリプトプロパティを追加 を押します。
 プロパティに```TOKEN```、値に先ほど取得したトークンを入力し終えたら"スクリプトプロパティを保存"をおしてください。(画像の値はサンプルです)
-![環境変数](./image/GHA-GAS/env.png)
+![環境変数](image/GHA-GAS/env.png)
 ## 2-3.スクリプトの作成
 ```コード.gs```に以下のコードを貼り付けてください。
-```javascript:コード.gs
+`javascript:コード.gs
 function doGet() {
   const headers = {
     'Authorization': 'token ' + PropertiesService.getScriptProperties().getProperty('TOKEN'),
@@ -63,7 +62,7 @@ function doGet() {
   };
   UrlFetchApp.fetch('https://api.github.com/repos/<ユーザー名>/<リポジトリ名>/dispatches', options);
 }
-```
+`
 <>がついている部分は自分の環境に合わせて置き換えてください。(置き換えたら<>は削除)
 - ```<イベント名>```: 任意の名前
 - ```<ユーザー名>```: GitHubのユーザー名
