@@ -30,6 +30,7 @@ jobs:
           find . -name '*.md' -not -path './.*' | xargs git add
           if ! git diff --staged --exit-code --quiet
           then
+            git remote set-url origin https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
             git config --global user.name '${GITHUB_ACTOR}'
             git config --global user.email 'github-actions[bot]@users.noreply.github.com'
             find . -name '*.md' -not -path './.*' | xargs git add
