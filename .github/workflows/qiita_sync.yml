@@ -35,7 +35,7 @@ jobs:
             git config --global user.email 'github-actions[bot]@users.noreply.github.com'
             find . -name '*.md' -not -path './.*' | xargs git add
             git commit -m "updated by qiita-sync"
-            git push
+            git push origin HEAD:${GITHUB_REF}
           fi
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
