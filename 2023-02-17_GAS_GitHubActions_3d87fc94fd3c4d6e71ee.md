@@ -117,7 +117,7 @@ typesの部分に```<イベント名>```を入力します。
 
 このままだと寂しいので、最後の行に成功画面を表示するコードを追加します。「この画面のままでもいい」という方は飛ばして大丈夫です。
 
-```javascript:コード.gs
+`javascript:コード.gs
 function doGet() {
 
   /*省略*/
@@ -133,7 +133,6 @@ function doGet() {
   const html = '<p>実行完了</p>';
   return HtmlService.createHtmlOutput(html);
 }
-```
 ```html```には、HTML文を文字列で構成して代入しています。
 そしてHtmlOutputオブジェクトをリターンすることで、```html```の内容を反映したWebページを表示させることができます。
 ```html```の内容は自由に変更してください。
