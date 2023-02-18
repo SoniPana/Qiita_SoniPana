@@ -6,18 +6,17 @@ private: true
 -->
 # はじめに
 
-GitHub Actionsを利用する機会が多かったのですが、外部から実行する方法が分からず困っていました。
+GitHub Actionsを利用する機会が多かったのですが、外部から実行する方法が分からなかった為わざわざリポジトリのページを開いて実行しており、だいぶ困っていました。
 
-そこでGitHub Actionsのドキュメントを見ていたところ、ワークフローを実行させるイベントの中に```repository_dispatch```というものが存在することを知りました。
+ある日、GitHub Actionsのドキュメントを見ていたところ、ワークフローを実行させるイベントの中に```repository_dispatch```というものが存在することを知りました。
 
 https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#repository_dispatch
 
 <br>
-「これ使えば外部から実行できんじゃね？」と思ったので試してみました。
+「これ使えば『リンク踏んだら実行』みたいなことできんじゃね？」と思ったので試してみました。
 
 ## 対象
-- GitHub Actionsの基本は分かっている
-- "GAS"を聞いたことがある、使ったことがある
+- GitHub Actionsの基本は分かっている人
 
 # 1.GitHub Personal Access Tokenの取得
 外部からGitHub Actionsを実行するためには、GitHub Personal Access Tokenが必要です。取得方法は
@@ -34,12 +33,12 @@ https://qiita.com/P-man_Brown/items/833c5ee114920db079a2
 
 # 2.GAS
 
-## 2-1.GASの作成
+## 2-1.GASへ移動
 GoogleドライブからGoogle App Scriptを開いてください。
 ![GASを開く](image/GHA-GAS/open-gas.png)
 
 ## 2-2.環境変数の設定
-スクリプトにトークンをそのまま貼り付けるとセキュリティ的に非常にマズイので、トークンを環境変数として設定します。
+スクリプトにトークンをそのまま貼り付けるとセキュリティ的に非常にマズイので、先程取得したトークンを環境変数として設定します。
 
 
 プロジェクトの設定→スクリプトプロパティ→スクリプトプロパティを追加 を押します。
