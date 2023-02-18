@@ -8,7 +8,6 @@ private: true
 # はじめに
 
 僕は今まで「GitHub Actionsのログ出力が見づらい問題」に悩まされていました。
-
 唐突ですが、以下のworkflowを実行してみましょう。
 
 ```yml:main.yml
@@ -48,7 +47,6 @@ print('Hello World')
 ![グループ化無](image/log_group/group_n.gif)
 
 ...見づらいです。ぱっと見「Hello World」がどこにあるのか分かりません。
-
 どうにかしてログ出力を見やすくする方法はないかと調べていたところ、公式のドキュメントで以下のようなものを見つけました。
 
 https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#grouping-log-lines
@@ -76,7 +74,6 @@ main.ymlを以下のように修正します。(2行加えるだけですが...)
 ```
 
 ```echo "::group::<グループ名>"```でログ出力をグループ化できます。(グループ名は任意)
-
 ```echo "::endgroup::"```でグループ化を終了します。
 
 # 2.実行
@@ -86,7 +83,6 @@ main.ymlを以下のように修正します。(2行加えるだけですが...)
 ![グループ化有](image/log_group/group.png)
 
 すごくスッキリしました。
-
 グループ名の部分を押すと展開できます。
 
 ![グループ化有](image/log_group/group_y.gif)
