@@ -1,10 +1,9 @@
 <!--
-title:   【GitHub Actions】ログ出力をグループ化する
+title:   【GitHub Actions】ログ出力をグループ化して見やすくする
 tags:    GitHubActions,備忘録,初心者
 id:      ab24d8e571587fa0ef13
-private: true
+private: false
 -->
-
 # はじめに
 
 僕は今まで「GitHub Actionsのログ出力が見づらい問題」に悩まされていました。
