@@ -114,7 +114,7 @@ https://docs.github.com/ja/actions/learn-github-actions/contexts#steps-context:~
 
 実行結果はこんな感じになります。
 
-![job](image/230219/job.gif)
+![job](https://raw.githubusercontent.com/Geusen/Qiita_Geusen/main/image/230219/job.gif)
 
 ワンクリックで結果が見られるようになりました。しかも大きいから見やすい。
 
