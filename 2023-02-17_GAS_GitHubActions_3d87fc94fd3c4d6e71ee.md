@@ -30,7 +30,7 @@ https://qiita.com/P-man_Brown/items/833c5ee114920db079a2
 
 こんな感じでチェックを付ければOKです。
 
-![GitHub Personal Access Tokenのチェック](image/GHA-GAS/github-personal.png)
+![GitHub Personal Access Tokenのチェック](image/230217/github-personal.png)
 
 
 # 2.GAS
@@ -39,7 +39,7 @@ https://qiita.com/P-man_Brown/items/833c5ee114920db079a2
 
 GoogleドライブからGoogle App Scriptを開いてください。
 
-![GASを開く](image/GHA-GAS/open-gas.png)
+![GASを開く](image/230217/open-gas.png)
 
 ## 2-2.環境変数の設定
 
@@ -49,7 +49,7 @@ GoogleドライブからGoogle App Scriptを開いてください。
 "プロジェクトの設定"→"スクリプトプロパティ"→"スクリプトプロパティを追加"を押します。
 プロパティに「TOKEN」、値に先ほど取得したトークンを入力し終えたら"スクリプトプロパティを保存"を押してください。(画像の値はサンプルです)
 
-![環境変数](image/GHA-GAS/env.png)
+![環境変数](image/230217/env.png)
 
 ## 2-3.スクリプトの作成
 
@@ -86,16 +86,16 @@ function doGet() {
 
 新しい説明文はテキトーに入力し、"アクセスできるユーザー"を"全員"にしてデプロイを押します。
 
-![デプロイ](image/GHA-GAS/deploy.png)
+![デプロイ](image/230217/deploy.png)
 
 初回はデータへのアクセスを許可する必要があるので、"アクセスを承認"を押してください。
 Googleアカウントにログイン後、以下のような画面が出てくるので"Advanced"→"Go to <プロジェクト名>(unsafe)"→"Allow"を押してください。
 
-![アクセス承認](image/GHA-GAS/access.png)
+![アクセス承認](image/230217/access.png)
 
 そしたらデプロイ完了です。URLはコピーしておいてください。
 
-![デプロイ完了](image/GHA-GAS/url.png)
+![デプロイ完了](image/230217/url.png)
 
 # 3.GitHub Actionsのymlファイルの設定
 
@@ -119,7 +119,7 @@ typesの部分に先程の```<イベント名>```を入力します。(<>は削�
 
 先程のコードの状態でURLを開き、実行に成功すると以下のような画面が表示されます。
 
-![none](image/GHA-GAS/none.png)
+![none](image/230217/none.png)
 
 このままだと寂しいので、最後の行に成功画面を表示するコードを追加します。「この画面のままでもいい」という方は飛ばして大丈夫です。
 
@@ -146,6 +146,6 @@ function doGet() {
 コードを追加し終えたら再度デプロイを行い、URLを開いてみてください。
 すると...
 
-![完了画面](image/GHA-GAS/complete.png)
+![完了画面](image/230217/complete.png)
 
 ...寂しさはあまり変わっていませんが、ちゃんと実行完了されたのが分かるようになったので多少マシにはなったかもしれません。
