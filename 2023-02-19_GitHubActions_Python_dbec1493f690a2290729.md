@@ -2,7 +2,7 @@
 title:   【GitHub Actions】Job SummaryでGitHub ActionsでのPythonの実行結果を見やすくする
 tags:    GitHubActions,Python,備忘録,初心者
 id:      dbec1493f690a2290729
-private: true
+private: false
 -->
 # はじめに
 
@@ -114,7 +114,7 @@ https://docs.github.com/ja/actions/learn-github-actions/contexts#steps-context:~
 
 実行結果はこんな感じになります。
 
-![summary](image/230219/summary.gif)
+![job](image/230219/job.gif)
 
 ワンクリックで結果が見られるようになりました。しかも大きいから見やすい。
 
