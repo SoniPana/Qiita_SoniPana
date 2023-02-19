@@ -6,7 +6,7 @@ private: true
 -->
 # はじめに
 
-サイコロが急に必要になったので、GitHub ActionsでPythonを動かして1～6の数字をランダムに表示させてみましょう。(無理矢理過ぎる話題作り)
+サイコロが急に必要になったので、GitHub ActionsでPythonを動かして1～6の数字をランダムに表示させてみます。(無理矢理過ぎる話題作り)
 ymlファイルとpythonのファイルは以下のようになっています。
 
 ```yaml:main.yml
@@ -58,7 +58,7 @@ https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-
 
 ・GitHub Actionsの基本は分かっている人
 
-# 1.pythonのファイルの修正
+# 1.pythonファイルの修正
 
 まずはPythonの変数の値を他のステップから参照できるようにします。
 
@@ -67,7 +67,6 @@ import random
 import subprocess
 
 number = random.randint(1,6)
-print('サイコロの出目は' + str(number) + 'です')
 subprocess.run([f'echo "NUMBER={number}" >> $GITHUB_OUTPUT'], shell=True)
 ```
 
@@ -115,7 +114,7 @@ https://docs.github.com/ja/actions/learn-github-actions/contexts#steps-context:~
 
 実行結果はこんな感じになります。
 
-![result](image/230219/summary.gif)
+![result2](image/230219/summary.gif)
 
 ワンクリックで結果が見られるようになりました。しかも大きいから見やすい。
 
@@ -126,9 +125,8 @@ https://docs.github.com/ja/actions/learn-github-actions/contexts#steps-context:~
 https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#example-of-adding-a-job-summary
 
 ということは皆大好きな「美味しいヤミー」も表示させることができる...？
-早速以下のサイトを参考に絵文字を変換し、美味しいヤミーを表示させてみました。
+早速[このサイト](https://gist.github.com/rxaviers/7360908)を参考に絵文字を変換し、美味しいヤミーを表示させてみました。
 
-https://gist.github.com/rxaviers/7360908
 
 ```yaml:yummy.yml
 name: yummy
