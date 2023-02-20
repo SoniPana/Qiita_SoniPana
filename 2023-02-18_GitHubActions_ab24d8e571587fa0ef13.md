@@ -90,4 +90,4 @@ main.ymlを以下のように修正します。(2行加えるだけですが...)
 
 以下のリポジトリに今回のコードが置いてあります。
 
-https://github.com/Geusen/log_group
+https://github.com/Geusen-Qiita/log-group
