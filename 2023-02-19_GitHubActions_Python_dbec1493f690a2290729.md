@@ -38,12 +38,12 @@ print('サイコロの出目は' + str(number) + 'です')
 
 GitHub Actionsの実行結果はこんな感じで見ることができます。
 
-![GitHub Actionsの実行結果](image/230219/open.gif)
+![GitHub Actionsの実行結果](image/23/02/19/open.gif)
 
 正直見づらいし、クリックするのが面倒です。
 できればこの画面の時点で結果を確認できるようにしたいです。
 
-![result](image/230219/summary_page.png)
+![result](image/23/02/19/summary_page.png)
 
 ググっても出てこなかったので公式のドキュメントを見ていたところ、以下のようなものを見つけました。
 
@@ -114,7 +114,7 @@ https://docs.github.com/ja/actions/learn-github-actions/contexts#steps-context:~
 
 実行結果はこんな感じになります。
 
-![job](https://raw.githubusercontent.com/Geusen/Qiita_Geusen/main/image/230219/job.gif)
+![job](https://raw.githubusercontent.com/Geusen/Qiita_Geusen/main/image/23/02/19/job.gif)
 
 ワンクリックで結果が見られるようになりました。しかも大きいから見やすい。
 
@@ -144,7 +144,7 @@ jobs:
 
 結果↓
 
-![yummy](image/230219/yummy2.png)
+![yummy](image/23/02/19/yummy2.png)
 
 見慣れた構文がちゃんと表示されました。
 
@@ -166,7 +166,7 @@ jobs:
 
 結果↓
 
-![yummy2](image/230219/yummy3.png)
+![yummy2](image/23/02/19/yummy3.png)
 
 表示できるじゃないか。絵文字変換していた時間返してくれ。
 
