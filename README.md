@@ -1,4 +1,4 @@
 Qiita記事保管用リポジトリ
-<a href='https://qiita.com/Geusen' target='_blank'>https://qiita.com/Geusen</a>
+<a href='https://qiita.com/SoniPana' target='_blank'>https://qiita.com/SoniPana</a>
 
-![Qiita Sync](https://github.com/Geusen/Qiita_Geusen/actions/workflows/qiita_sync_check.yml/badge.svg)
+![Qiita Sync](https://github.com/SoniPana/Qiita_SoniPana/actions/workflows/qiita_sync_check.yml/badge.svg)
